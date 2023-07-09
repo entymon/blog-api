@@ -8,7 +8,9 @@ export class BlogPostResolver {
   constructor(private readonly blogPostService: BlogPostService) {}
 
   @Mutation('createBlogPost')
-  create(@Args('createBlogPostInput') createBlogPostInput: CreateBlogPostInput) {
+  create(
+    @Args('createBlogPostInput') createBlogPostInput: CreateBlogPostInput,
+  ) {
     return this.blogPostService.create(createBlogPostInput);
   }
 
@@ -23,8 +25,13 @@ export class BlogPostResolver {
   }
 
   @Mutation('updateBlogPost')
-  update(@Args('updateBlogPostInput') updateBlogPostInput: UpdateBlogPostInput) {
-    return this.blogPostService.update(updateBlogPostInput.id, updateBlogPostInput);
+  update(
+    @Args('updateBlogPostInput') updateBlogPostInput: UpdateBlogPostInput,
+  ) {
+    return this.blogPostService.update(
+      updateBlogPostInput.id,
+      updateBlogPostInput,
+    );
   }
 
   @Mutation('removeBlogPost')

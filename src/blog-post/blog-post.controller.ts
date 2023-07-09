@@ -6,7 +6,6 @@ import {
   Delete,
   Param,
   Body,
-  Req,
 } from '@nestjs/common';
 import { CreateBlogPostInput } from './dto/create-blog-post.input';
 import { UpdateBlogPostInput } from './dto/update-blog-post.input';
