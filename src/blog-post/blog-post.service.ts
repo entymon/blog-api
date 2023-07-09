@@ -7,10 +7,13 @@ import { BlogPost } from './entities/blog-post.entity';
 export class BlogPostService {
   private readonly posts: BlogPost[] = [];
 
-  create(createBlogPostInput: CreateBlogPostInput) {
-    const post = createBlogPostInput as BlogPost;
-    this.posts.push(post);
-    return 'This action adds a new post';
+  create(createBlogPostInput: CreateBlogPostInput): void {
+    try {
+      const post = createBlogPostInput as BlogPost;
+      this.posts.push(post);
+    } catch (error) {
+      throw new Error(error.message);
+    }
   }
 
   findAll(): BlogPost[] {
