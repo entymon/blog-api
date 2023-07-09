@@ -1,0 +1,24 @@
+type BlogPost {
+  # Example field (placeholder)
+  exampleField: Int
+}
+
+input CreateBlogPostInput {
+  # Example field (placeholder)
+  exampleField: Int
+}
+
+input UpdateBlogPostInput {
+  id: Int!
+}
+
+type Query {
+  blogPost: [BlogPost]!
+  blogPost(id: Int!): BlogPost
+}
+
+type Mutation {
+  createBlogPost(createBlogPostInput: CreateBlogPostInput!): BlogPost!
+  updateBlogPost(updateBlogPostInput: UpdateBlogPostInput!): BlogPost!
+  removeBlogPost(id: Int!): BlogPost
+}
