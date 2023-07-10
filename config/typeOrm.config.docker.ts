@@ -1,3 +1,8 @@
+/**
+ * The configuration can be taken for migrations running from docker env
+ *
+ */
+
 import { DataSource, DataSourceOptions } from 'typeorm';
 import { ConfigService } from '@nestjs/config';
 import { config } from 'dotenv';
