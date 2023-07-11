@@ -14,6 +14,6 @@ export class BlogPost {
   @Column()
   author: string;
 
-  @Column()
+  @Column({ default: true })
   isPublished: boolean;
 }

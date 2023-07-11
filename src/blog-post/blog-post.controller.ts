@@ -42,7 +42,8 @@ export class BlogPostController {
   }
 
   @Delete(':id')
-  remove(@Param() id: string): string {
-    return `This action deletes a #${id} post`;
+  async remove(@Param('id') id: string): Promise<string> {
+    const response = await this.postService.remove(Number(id));
+    return response;
   }
 }

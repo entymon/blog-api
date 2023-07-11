@@ -21,7 +21,7 @@ export class BlogPostResolver {
 
   @Query('blogPost')
   findOne(@Args('id') id: number) {
-    return this.blogPostService.findOne(id);
+    return this.blogPostService.findOneById(id);
   }
 
   @Mutation('updateBlogPost')

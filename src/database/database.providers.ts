@@ -19,3 +19,5 @@ export const databaseProviders = [
     },
   },
 ];
+
+// export const databaseProviders = [TypeOrmModule.forRoot(dataSourceOptions)];
